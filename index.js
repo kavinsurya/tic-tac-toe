@@ -55,7 +55,6 @@ io.on("connection", function (socket) {
     if (!getOpponent(socket)) {
       return;
     }
-    console.log("Move made by : ", data);
     socket.emit("move.made", data);
     getOpponent(socket).emit("move.made", data);
   });
